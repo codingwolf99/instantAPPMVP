@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.dreamfish.com.autocalc"
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 28
         versionCode 3
         versionName '1.4.Dev-17'
@@ -21,6 +21,9 @@ android {
         targetCompatibility = 1.8
     }
     buildToolsVersion = '29.0.3'
+
+    namespace 'com.dreamfish.com.autocalc'
+
 }
 
 dependencies {

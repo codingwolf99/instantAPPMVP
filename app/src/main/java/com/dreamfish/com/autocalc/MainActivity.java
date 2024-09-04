@@ -181,32 +181,32 @@ public class MainActivity extends AppCompatActivity {
     private void initMainMenu() {
         mainMenu = new PopupMenu(MainActivity.this, btn_settings);
         mainMenu.getMenuInflater().inflate(R.menu.menu_main, mainMenu.getMenu());
-        mainMenu.setOnMenuItemClickListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.action_exit:
-                    finish();
-                    break;
-                case R.id.action_help:
-                    CommonDialogs.showHelp(this);
-                    break;
-                case R.id.action_settings:
-                    CommonDialogs.showSettings(this);
-                    break;
-                case R.id.action_show_full:
-                    fragmentMain.showFullText();
-                    break;
-                case R.id.action_show_functions:
-                    fragmentMain.showAllFunctionsHelp();
-                    break;
-                case R.id.action_custom_input:
-                    fragmentMain.showCustomerView();
-                    break;
-                case R.id.action_show_calc_step:
-                    fragmentMain.showCalcStep();
-                    break;
-            }
-            return true;
-        });
+//        mainMenu.setOnMenuItemClickListener(item -> {
+//            switch (item.getItemId()) {
+//                case R.id.action_exit:
+//                    finish();
+//                    break;
+//                case R.id.action_help:
+//                    CommonDialogs.showHelp(this);
+//                    break;
+//                case R.id.action_settings:
+//                    CommonDialogs.showSettings(this);
+//                    break;
+//                case R.id.action_show_full:
+//                    fragmentMain.showFullText();
+//                    break;
+//                case R.id.action_show_functions:
+//                    fragmentMain.showAllFunctionsHelp();
+//                    break;
+//                case R.id.action_custom_input:
+//                    fragmentMain.showCustomerView();
+//                    break;
+//                case R.id.action_show_calc_step:
+//                    fragmentMain.showCalcStep();
+//                    break;
+//            }
+//            return true;
+//        });
     }
 
     //退出提示
