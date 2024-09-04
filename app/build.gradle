@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
     defaultConfig {
-        applicationId "com.dreamfish.com.autocalc"
+        applicationId "com.hkc.cal"
         minSdkVersion 26
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 3
         versionName '1.4.Dev-17'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
