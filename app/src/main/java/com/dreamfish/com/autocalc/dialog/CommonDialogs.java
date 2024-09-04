@@ -1,7 +1,6 @@
 package com.dreamfish.com.autocalc.dialog;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -9,14 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.dreamfish.com.autocalc.AboutActivity;
-import com.dreamfish.com.autocalc.HelpActivity;
-import com.dreamfish.com.autocalc.MainActivity;
-import com.dreamfish.com.autocalc.R;
-import com.dreamfish.com.autocalc.SettingsActivity;
-import com.dreamfish.com.autocalc.utils.AlertDialogTool;
-
 import androidx.appcompat.app.AlertDialog;
+
+import com.dreamfish.com.autocalc.R;
+import com.dreamfish.com.autocalc.utils.AlertDialogTool;
 
 public class CommonDialogs {
 
@@ -24,14 +19,14 @@ public class CommonDialogs {
   public static final int RESULT_REQUEST_PERMISSION = 101;
 
   public static void showHelp(Activity activity) {
-    activity.startActivity(new Intent(activity, HelpActivity.class));
+//    activity.startActivity(new Intent(activity, HelpActivity.class));
   }
-  public static void showAbout(Activity activity) {
-    activity.startActivity(new Intent(activity, AboutActivity.class));
-  }
-  public static void showSettings(Activity activity) {
-    activity.startActivityForResult(new Intent(activity, SettingsActivity.class), RESULT_SETTING_ACTIVITY);
-  }
+//  public static void showAbout(Activity activity) {
+//    activity.startActivity(new Intent(activity, AboutActivity.class));
+//  }
+//  public static void showSettings(Activity activity) {
+//    activity.startActivityForResult(new Intent(activity, SettingsActivity.class), RESULT_SETTING_ACTIVITY);
+//  }
 
   public interface OnAgreementCloseListener {
     void onAgreementClose(boolean allowed);

@@ -6,7 +6,6 @@
 
 
     <LinearLayout
-        android:id="@+id/view_start_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -142,7 +141,6 @@
         android:background="?android:attr/listDivider" />
 
     <LinearLayout
-        android:id="@+id/view_result_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
