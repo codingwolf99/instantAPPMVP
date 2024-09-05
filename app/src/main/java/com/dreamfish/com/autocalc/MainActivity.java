@@ -3,7 +3,9 @@ package com.dreamfish.com.autocalc;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -40,14 +42,53 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        // 获取启动此 Activity 的 intent
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        Uri data = intent.getData();
+
+        if (Intent.ACTION_VIEW.equals(action) && data != null) {
+            // 解析 URI 参数
+            String id = data.getQueryParameter("id");
+            if (id != null) {
+                // 使用解析的参数
+                jumpChrome();
+            }
+        }
+
         StatusBarUtils.setLightMode(this);
         new UpdaterUtils(this);
+
 
         initResources();
         initControl();
         initView();
         initMainMenu();
     }
+
+
+    private boolean jumpChrome(){
+        String url = "https://www.qiliangjia.com/";
+        try {
+            // 检查是否安装了 Chrome 浏览器
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            // 指定 Chrome 浏览器的包名
+            intent.setPackage("com.android.chrome");
+
+            // 尝试启动 Chrome 浏览器
+            this.startActivity(intent);
+        } catch (Exception e) {
+            Log.d("hkc_test", "jumpChrome: "+e);
+            // 如果 Chrome 浏览器不可用，使用默认浏览器打开
+            Intent fallbackIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            fallbackIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            this.startActivity(fallbackIntent);
+        }
+        return true;
+    }
+
 
     private ViewPager mViewPager;
     private MainFragment fragmentMain;

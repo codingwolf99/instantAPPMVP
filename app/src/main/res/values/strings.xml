@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AutoCalc</string>
+    <string name="app_name">最美计算器</string>
     <string name="app_description">一款超级简单的 Android 计算器</string>
     <string name="app_version">V1.3.Dev-0517</string>
     <string name="app_copyright">© 2020 By 梦欤</string>
@@ -133,5 +133,6 @@
     <string name="text_agreement_lost">如果您不同意或拒绝授予这些权限，您将无法使用 App 的部分或全部功能。</string>
     <string name="text_agreement_allow">同意并继续</string>
     <string name="text_agreement_not_allow">不同意并退出</string>
+    <string name="title_dynamicfeature">Module Title</string>
 
 </resources>
