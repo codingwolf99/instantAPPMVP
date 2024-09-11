@@ -5,7 +5,7 @@
     <string name="app_copyright">开发者</string>
 
     <string name="action_exit">退出程序</string>
-    <string name="action_help">帮助</string>
+    <string name="action_help">在浏览器中查看使用手册</string>
     <string name="action_settings">设置</string>
     <string name="action_close">关闭</string>
     <string name="action_show_functions">查看所有函数</string>

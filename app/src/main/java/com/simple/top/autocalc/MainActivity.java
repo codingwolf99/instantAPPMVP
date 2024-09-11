@@ -44,15 +44,6 @@ public class MainActivity extends AppCompatActivity {
         String action = intent.getAction();
         Uri data = intent.getData();
 
-        if (Intent.ACTION_VIEW.equals(action) && data != null) {
-            // 解析 URI 参数
-            String id = data.getQueryParameter("id");
-            if (id != null) {
-                // 使用解析的参数
-                jumpChrome();
-            }
-        }
-
         StatusBarUtils.setLightMode(this);
         new UpdaterUtils(this);
 
@@ -65,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private boolean jumpChrome(){
-        String url = "https://www.qiliangjia.com/";
+        String url = "https://qssmtxby3y.feishu.cn/docx/NPI4dhG4GouxFLxJlO0cFWH8nsd?from=from_copylink";
         try {
             // 检查是否安装了 Chrome 浏览器
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
@@ -218,32 +209,12 @@ public class MainActivity extends AppCompatActivity {
     private void initMainMenu() {
         mainMenu = new PopupMenu(MainActivity.this, btn_settings);
         mainMenu.getMenuInflater().inflate(R.menu.menu_main, mainMenu.getMenu());
-//        mainMenu.setOnMenuItemClickListener(item -> {
-//            switch (item.getItemId()) {
-//                case R.id.action_exit:
-//                    finish();
-//                    break;
-//                case R.id.action_help:
-//                    CommonDialogs.showHelp(this);
-//                    break;
-//                case R.id.action_settings:
-//                    CommonDialogs.showSettings(this);
-//                    break;
-//                case R.id.action_show_full:
-//                    fragmentMain.showFullText();
-//                    break;
-//                case R.id.action_show_functions:
-//                    fragmentMain.showAllFunctionsHelp();
-//                    break;
-//                case R.id.action_custom_input:
-//                    fragmentMain.showCustomerView();
-//                    break;
-//                case R.id.action_show_calc_step:
-//                    fragmentMain.showCalcStep();
-//                    break;
-//            }
-//            return true;
-//        });
+        mainMenu.setOnMenuItemClickListener(item -> {
+            if(item.getItemId() == R.id.action_help){
+                jumpChrome();
+            }
+            return true;
+        });
     }
 
     //退出提示
