@@ -70,7 +70,7 @@
         android:orientation="horizontal"
         android:padding="15dp">
 
-        <com.dreamfish.com.autocalc.widgets.AutofitTextView
+        <com.simple.top.autocalc.widgets.AutofitTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="0dp"

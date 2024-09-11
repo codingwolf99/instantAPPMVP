@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".DateRangeActivity">
 
-    <com.dreamfish.com.autocalc.widgets.MyTitleBar
+    <com.simple.top.autocalc.widgets.MyTitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">最美计算器</string>
+    <string name="app_name">极简计算器</string>
     <string name="app_description">一款超级简单的 Android 计算器</string>
-    <string name="app_version">V1.3.Dev-0517</string>
-    <string name="app_copyright">© 2020 By 梦欤</string>
+    <string name="app_version">V1.0</string>
+    <string name="app_copyright">开发者</string>
 
     <string name="action_exit">退出程序</string>
     <string name="action_help">帮助</string>
