@@ -80,7 +80,7 @@ public class MainFragment extends Fragment {
     initResources();
     initCalc();
 
-    vibrator = (Vibrator) getActivity().getSystemService(VIBRATOR_SERVICE);
+//    vibrator = (Vibrator) getActivity().getSystemService(VIBRATOR_SERVICE);
 
     layout_top.setVerticalFadingEdgeEnabled(true);
     layout_top.setFadingEdgeLength(50);
@@ -147,7 +147,7 @@ public class MainFragment extends Fragment {
   private View root;
   private Context context;
 
-  private Vibrator vibrator;
+//  private Vibrator vibrator;
   private AutoCalc autoCalc;
 
   private LinearLayout layout_root;
@@ -468,7 +468,7 @@ public class MainFragment extends Fragment {
   private boolean isCalcAndError = false;
 
   private void vibratorVibrate() {
-    if(inited && useTouchVibrator) vibrator.vibrate(30);
+//    if(inited && useTouchVibrator) vibrator.vibrate(30);
   }
 
   //switch modes

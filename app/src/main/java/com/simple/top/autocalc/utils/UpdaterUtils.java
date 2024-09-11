@@ -147,10 +147,6 @@ public class UpdaterUtils {
 
       if(success) {
         activity.runOnUiThread(() -> {
-          if(checkingLatest)
-            Toast.makeText(activity, text_latest, Toast.LENGTH_LONG).show();
-          else
-            askForUpdate();
           if(!checkingIsAuto) checkingUpdateDialog.cancel();
         });
       }
