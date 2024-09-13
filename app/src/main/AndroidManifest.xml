@@ -46,7 +46,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.hkc.calc.fileprovider"
+            android:authorities="com.xiaoyu.calc.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
