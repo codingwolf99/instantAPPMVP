@@ -191,20 +191,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateMainMenuState() {
         Menu menu = mainMenu.getMenu();
-        switch (currentTabPos) {
-            case 0:
-                menu.findItem(R.id.action_show_functions).setEnabled(true);
-                menu.findItem(R.id.action_custom_input).setEnabled(true);
-                menu.findItem(R.id.action_show_calc_step).setEnabled(true);
-                menu.findItem(R.id.action_show_full).setEnabled(true);
-                break;
-            case 1:
-                menu.findItem(R.id.action_show_functions).setEnabled(false);
-                menu.findItem(R.id.action_custom_input).setEnabled(false);
-                menu.findItem(R.id.action_show_calc_step).setEnabled(false);
-                menu.findItem(R.id.action_show_full).setEnabled(false);
-                break;
-        }
     }
     private void initMainMenu() {
         mainMenu = new PopupMenu(MainActivity.this, btn_settings);
